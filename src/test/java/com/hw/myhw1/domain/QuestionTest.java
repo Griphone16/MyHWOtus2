@@ -3,6 +3,9 @@ package com.hw.myhw1.domain;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class QuestionTest {
@@ -12,7 +15,7 @@ class QuestionTest {
     public static final String ANSWER_1 = "Answer1";
 
     @Test
-    @DisplayName("Должен получать Text")
+    @DisplayName("Р”РѕР»Р¶РµРЅ РїРѕР»СѓС‡Р°С‚СЊ Text")
     void getText() {
 
         Question question = new Question(QUESTION_1);
@@ -21,7 +24,7 @@ class QuestionTest {
     }
 
     @Test
-    @DisplayName("Должен устанавливать Text")
+    @DisplayName("Р”РѕР»Р¶РµРЅ СѓСЃС‚Р°РЅР°РІР»РёРІР°С‚СЊ Text")
     void setText() {
         Question question = new Question(QUESTION_1);
         question.setText(QUESTION_2);
@@ -29,18 +32,28 @@ class QuestionTest {
     }
 
     @Test
-    @DisplayName("Должен получать Answers")
+    @DisplayName("Р”РѕР»Р¶РµРЅ РїРѕР»СѓС‡Р°С‚СЊ Answers")
     void getAnswers() {
-
+        Question question = new Question(QUESTION_1);
+        Answer answer = new Answer(ANSWER_1, true);
+        question.addAnswers(answer);
+        assertEquals(question.getAnswers().size(),1);
     }
 
     @Test
-    @DisplayName("Должен устанавливать Answers")
+    @DisplayName("Р”РѕР»Р¶РµРЅ СѓСЃС‚Р°РЅР°РІР»РёРІР°С‚СЊ Answers")
     void setAnswers() {
+
+        Question question = new Question(QUESTION_1);
+        Answer answer = new Answer(ANSWER_1, true);
+        List<Answer> answerList = new ArrayList<Answer>();
+        answerList.add(answer);
+        question.setAnswers(answerList);
+        assertEquals(question.getAnswers().get(0),answer);
     }
 
     @Test
-    @DisplayName("Должен добавлять Answers")
+    @DisplayName("Р”РѕР»Р¶РµРЅ РґРѕР±Р°РІР»СЏС‚СЊ Answers")
     void addAnswers() {
         Question question = new Question(QUESTION_1);
         Answer answer = new Answer(ANSWER_1, true);
