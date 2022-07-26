@@ -1,7 +1,6 @@
-package com.hw.myhw1.dao;
+package com.hw.myhw2.dao;
 
-import com.hw.myhw1.domain.Answer;
-import com.hw.myhw1.domain.Question;
+import com.hw.myhw2.domain.Question;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -36,7 +35,7 @@ class ReaderCSVDaoSimpleTest {
     @DisplayName("Должен считывать вопросы из файла CSV")
     void getAnswers() {
         ReaderCSVDaoSimple readerCSVDaoSimple = new ReaderCSVDaoSimple();
-        readerCSVDaoSimple.setFileCSV("E:/My HW Otus/HW.1/myHW1/src/main/resources/QuestionsTest.csv");
+        readerCSVDaoSimple.setFileCSV("E:/My HW Otus/HW.2/src/main/resources/QuestionsTest.csv");
         List<Question> questions = readerCSVDaoSimple.getAnswers();
         assertEquals(questions.size(), 2);
 

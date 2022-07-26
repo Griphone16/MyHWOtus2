@@ -1,13 +1,13 @@
-package com.hw.myhw1;
+package com.hw.myhw2;
 
-import com.hw.myhw1.domain.Question;
-import com.hw.myhw1.service.ReaderCSVService;
+import com.hw.myhw2.domain.Question;
+import com.hw.myhw2.service.ReaderCSVService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.List;
 
 
-public class MyHw1Application {
+public class MyHw2Application {
 
     public static void main(String[] args) {
 

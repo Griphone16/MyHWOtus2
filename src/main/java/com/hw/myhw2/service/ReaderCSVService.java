@@ -1,8 +1,8 @@
-package com.hw.myhw1.service;
+package com.hw.myhw2.service;
 
 
 
-import com.hw.myhw1.domain.Question;
+import com.hw.myhw2.domain.Question;
 
 import java.util.List;
 

@@ -5,23 +5,23 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
     <context:property-placeholder
         location="Spring-properties.xml" />
-    <bean id="answerDao" class="com.hw.myhw1.dao.AnswerDaoSimple">
+    <bean id="answerDao" class="com.hw.myhw2.dao.AnswerDaoSimple">
 
     </bean>
 
-    <bean id="answer" class="com.hw.myhw1.domain.Answer">
+    <bean id="answer" class="com.hw.myhw2.domain.Answer">
 
     </bean>
-    <bean id="questionService" class="com.hw.myhw1.service.QuestionServiceImpl">
+    <bean id="questionService" class="com.hw.myhw2.service.QuestionServiceImpl">
 
     </bean>
 
-    <bean id="readerCSVService" class="com.hw.myhw1.service.ReaderCSVServiceImpl">
+    <bean id="readerCSVService" class="com.hw.myhw2.service.ReaderCSVServiceImpl">
 
         <constructor-arg name = "dao" ref="ReaderCSVDao"/>
 
     </bean>
-    <bean id="ReaderCSVDao" class="com.hw.myhw1.dao.ReaderCSVDaoSimple">
+    <bean id="ReaderCSVDao" class="com.hw.myhw2.dao.ReaderCSVDaoSimple">
         <property name="fileCSV" value="${fileCSV}" />
     </bean>
 
