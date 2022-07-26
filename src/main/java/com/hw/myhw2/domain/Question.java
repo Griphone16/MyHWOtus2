@@ -1,4 +1,4 @@
-package com.hw.myhw1.domain;
+package com.hw.myhw2.domain;
 
 import java.util.ArrayList;
 import java.util.List;

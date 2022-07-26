@@ -1,4 +1,4 @@
-package com.hw.myhw1.dao;
+package com.hw.myhw2.dao;
 
 public class AnswerDaoSimple implements AnswerDao{
 

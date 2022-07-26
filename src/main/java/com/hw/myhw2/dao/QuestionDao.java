@@ -1,6 +1,6 @@
-package com.hw.myhw1.dao;
+package com.hw.myhw2.dao;
 
-import com.hw.myhw1.domain.Answer;
+import com.hw.myhw2.domain.Answer;
 
 
 import java.util.List;
