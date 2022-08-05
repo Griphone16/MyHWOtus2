@@ -1,10 +1,7 @@
 package com.hw.myhw2.config;
 
 import com.hw.myhw2.dao.ReaderCSVDao;
-import com.hw.myhw2.service.QuestionService;
-import com.hw.myhw2.service.QuestionServiceImpl;
-import com.hw.myhw2.service.ReaderCSVService;
-import com.hw.myhw2.service.ReaderCSVServiceImpl;
+import com.hw.myhw2.service.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -16,4 +13,7 @@ public class ServicesConfig {
 
     @Bean
     public ReaderCSVService readerCSVService(ReaderCSVDao dao) {return new ReaderCSVServiceImpl(dao);   }
+
+    @Bean
+    public SertificationService sertificationService(ReaderCSVService readerCSV) {return new SertificationServiceImpl(readerCSV);}
 }

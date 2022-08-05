@@ -2,6 +2,7 @@ package com.hw.myhw2;
 
 import com.hw.myhw2.domain.Question;
 import com.hw.myhw2.service.ReaderCSVService;
+import com.hw.myhw2.service.SertificationService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -23,12 +24,10 @@ public class MyHw2Application {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(MyHw2Application.class);
 
-        ReaderCSVService readerCSV = context.getBean(ReaderCSVService.class);
+        SertificationService sertificationService = context.getBean(SertificationService.class);
 
-        List<Question> questions = readerCSV.getAnswers();
-        for (Question question: questions) {
-            System.out.println(question);
-        }
+        sertificationService.sertificate();
+
     }
 
 }

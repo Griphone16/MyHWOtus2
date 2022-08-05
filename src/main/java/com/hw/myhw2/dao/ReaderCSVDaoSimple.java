@@ -74,11 +74,6 @@ public class ReaderCSVDaoSimple implements ReaderCSVDao{
             e.printStackTrace();
         }
 
-//        List<Question> listQuestions = new ArrayList<>();
-//        listQuestions.add(new Question("Сколько будет 2+2"));
-//        listQuestions.add(new Question("Сколько будет 50/5"));
-//        listQuestions.add(new Question("Сколько будет 100*200"));
-
         return result;
     }
 }
