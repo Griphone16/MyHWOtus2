@@ -2,6 +2,7 @@ package com.hw.myhw2.dao;
 
 import com.hw.myhw2.domain.Answer;
 import com.hw.myhw2.domain.Question;
+import org.springframework.beans.factory.annotation.Value;
 
 
 import java.io.BufferedReader;
@@ -13,6 +14,7 @@ import java.util.Scanner;
 
 public class ReaderCSVDaoSimple implements ReaderCSVDao{
 
+    @Value("${db.fileCSV}")
     private String fileCSV;
 
     public String getFileCSV() {
